@@ -27,7 +27,7 @@ class ScssCommands extends AbstractCommands
     protected const SCSS_FORMATTERS = ['compact', 'compressed', 'crunched', 'expanded', 'nested'];
 
     /**
-     * Compiles SCSS.
+     * Compile SCSS to CSS.
      *
      * @command assets:compile-scss
      *
