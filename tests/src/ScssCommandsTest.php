@@ -14,6 +14,7 @@ use Symfony\Component\Console\Output\BufferedOutput;
  * Tests the command wrappers for Robo "assets" tasks.
  *
  * @coversDefaultClass \TaskRunner\Scss\TaskRunner\Commands\ScssCommands
+ * @phpcs:disable SlevomatCodingStandard.Arrays.TrailingArrayComma
  */
 final class ScssCommandsTest extends TestCase
 {
@@ -64,19 +65,19 @@ final class ScssCommandsTest extends TestCase
  nav ul li { color:#111; }
 
 
-CSS,
+CSS
             ],
             [
                 'compressed',
                 <<<CSS
 nav ul{margin:0}nav ul li{color:#111}
-CSS,
+CSS
             ],
             [
                 'crunched',
                 <<<CSS
 nav ul{margin:0}nav ul li{color:#111}
-CSS,
+CSS
             ],
             [
                 'expanded',
@@ -88,7 +89,7 @@ nav ul li {
   color: #111;
 }
 
-CSS,
+CSS
             ],
             [
                 'nested',
@@ -98,7 +99,7 @@ nav ul {
   nav ul li {
     color: #111; }
 
-CSS,
+CSS
             ],
         ];
     }
