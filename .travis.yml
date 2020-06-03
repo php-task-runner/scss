@@ -1,0 +1,29 @@
+language: php
+sudo: false
+
+php:
+  - 7.1
+  - 7.2
+  - 7.3
+  - 7.4
+
+env:
+  - TEST_SUITE=PHP_CodeSniffer
+  - TEST_SUITE=PHPUnit
+
+# Only run the coding standards check once.
+matrix:
+  exclude:
+    - php: 7.1
+      env: TEST_SUITE=PHP_CodeSniffer
+    - php: 7.2
+      env: TEST_SUITE=PHP_CodeSniffer
+    - php: 7.3
+      env: TEST_SUITE=PHP_CodeSniffer
+
+before_script:
+  - composer install
+
+script:
+  - test ${TEST_SUITE} == "PHP_CodeSniffer" || ./vendor/bin/phpunit tests/
+  - test ${TEST_SUITE} == "PHPUnit" || ./vendor/bin/phpcs
