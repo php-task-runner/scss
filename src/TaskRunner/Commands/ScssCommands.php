@@ -7,7 +7,6 @@ namespace TaskRunner\Scss\TaskRunner\Commands;
 use Consolidation\AnnotatedCommand\CommandData;
 use OpenEuropa\TaskRunner\Commands\AbstractCommands;
 use Robo\Collection\CollectionBuilder;
-use Robo\Task\Assets\loadTasks;
 use Symfony\Component\Console\Input\InputOption;
 
 /**
@@ -17,8 +16,6 @@ use Symfony\Component\Console\Input\InputOption;
  */
 class ScssCommands extends AbstractCommands
 {
-    use loadTasks;
-
     /**
      * List of formatters that is offered by the ScssPhp compiler.
      *

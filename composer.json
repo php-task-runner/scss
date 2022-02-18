@@ -4,9 +4,9 @@
     "keywords": ["task-runner"],
     "type": "library",
     "require": {
-        "php": "~7.1",
-        "consolidation/robo": "^1.4.11",
-        "openeuropa/task-runner": "^1.0.0-beta6",
+        "php": ">=7.4",
+        "league/container": "~3.0",
+        "openeuropa/task-runner": "^2.0",
         "scssphp/scssphp": "~1.1"
     },
     "require-dev": {
@@ -32,7 +32,10 @@
         }
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
     },
     "minimum-stability": "dev",
     "prefer-stable": true
