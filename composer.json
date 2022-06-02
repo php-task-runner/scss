@@ -5,9 +5,8 @@
     "type": "library",
     "require": {
         "php": ">=7.4",
-        "league/container": "~3.0",
         "openeuropa/task-runner": "^2.0",
-        "scssphp/scssphp": "~1.1"
+        "scssphp/scssphp": "^1.10"
     },
     "require-dev": {
         "phpunit/phpunit": "~7 || ~8 || ~9",
